@@ -1,6 +1,6 @@
 {
   "name": "react-native-click-type",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A React Native package for differentiating between mouse and touch clicks.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
