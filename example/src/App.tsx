@@ -4,7 +4,7 @@ import { StyleSheet, View, Text } from 'react-native';
 import { getClickType } from 'react-native-click-type';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<String | undefined>();
 
   React.useEffect(() => {
     getClickType().then(setResult);
