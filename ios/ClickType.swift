@@ -1,8 +1,21 @@
+import Foundation
+import UIKit
+
 @objc(ClickType)
 class ClickType: NSObject {
+  @objc func getClickType(_ event: UIEvent, resolver: @escaping RCTPromiseResolveBlock, rejecter: @escaping RCTPromiseRejectBlock) {
+      if let touches = event.allTouches {
+          if let touch = touches.first {
+              if touch.type == .indirect {
+                  resolver("mouse")
+                  return
+              }
+          }
+      }
+      resolver("touch")
+  }
 
-  @objc(multiply:withB:withResolver:withRejecter:)
-  func multiply(a: Float, b: Float, resolve:RCTPromiseResolveBlock,reject:RCTPromiseRejectBlock) -> Void {
-    resolve(a*b)
+  @objc static func requiresMainQueueSetup() -> Bool {
+      return true
   }
 }

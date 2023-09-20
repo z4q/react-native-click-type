@@ -17,6 +17,6 @@ const ClickType = NativeModules.ClickType
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return ClickType.multiply(a, b);
+export function getClickType(): Promise<String> {
+  return ClickType.getClickType();
 }
