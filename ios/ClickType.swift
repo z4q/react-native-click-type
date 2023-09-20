@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import React
 
 @objc(ClickType)
 class ClickType: NSObject {
