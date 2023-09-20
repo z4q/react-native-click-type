@@ -3,8 +3,7 @@
 @interface RCT_EXTERN_MODULE(ClickType, NSObject)
 
 RCT_EXTERN_METHOD(
-  getClickType:(NSDictionary *)options
-  resolver:(RCTPromiseResolveBlock)resolve
+  getClickType:(RCTPromiseResolveBlock)resolve
   rejecter:(RCTPromiseRejectBlock)reject
 )
 
